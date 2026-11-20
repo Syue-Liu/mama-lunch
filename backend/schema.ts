@@ -14,3 +14,8 @@ export const lunchSelection = sqliteTable('lunch_selection', {
   address: text('address').notNull(),
   updatedAt: integer('updated_at').notNull(),
 });
+export const lunchStoreOverrides = sqliteTable('lunch_store_overrides', {
+  id: text('id').primaryKey(),
+  details: text('details').notNull(),
+  deleted: integer('deleted').notNull().default(0),
+});
